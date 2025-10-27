@@ -1,5 +1,4 @@
-````markdown
-# Humanise Commits Tool
+# HumaniseReleaseNotes
 
 ## Overview  
 This tool helps teams convert technical commit history between two Git branches into human-friendly release notes suitable for QA and non-technical stakeholders. It automates:  
@@ -26,8 +25,8 @@ This tool helps teams convert technical commit history between two Git branches 
 1. Clone this repository:  
    ```bash
    git clone <your-repo-url>   
-   cd <your-repo-folder>  
-````
+   cd <your-repo-folder> ```
+
 
 2. Set up virtual environment and install dependencies:
 
