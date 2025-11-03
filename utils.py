@@ -67,5 +67,5 @@ def write_markdown(
         f.write(f"Generated: {os.getcwd()}\n\n")
         for out in output_list:
             short_sha = out.sha[:7]
-            f.write(f"- **{short_sha}** ({out.category}): {out.human_summary}\n")
+            f.write(f"- **{short_sha}** ({out.category}): {out.human_summary} - {out.author}\n")
     console.print(f"[green]✅ Markdown output saved to:[/green] [bold]{md_file}[/bold]")
