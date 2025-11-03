@@ -54,7 +54,7 @@ def main(
         )
 
     # Write markdown
-    md_filename = f"release_notes_{base_branch}_to_{compare_branch}.md"
+    md_filename = f"Release Notes for:  {base_branch} to {compare_branch}.md"
     write_markdown(result.output, base_branch, compare_branch, repo_path, md_filename)
 
 

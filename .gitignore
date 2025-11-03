@@ -176,3 +176,4 @@ pyrightconfig.json
 release_*.md
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+release_notes/
