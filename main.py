@@ -34,6 +34,7 @@ def main(
     console.print(
         f"[magenta]Found [bold]{len(commit_list)}[/bold] commits. Sending to AI for human-friendly summarisation…[/magenta]"
     )
+    console.print(f"{commit_list[:3]}")
 
     with Progress(
         SpinnerColumn(),
@@ -41,14 +42,15 @@ def main(
         transient=True,
     ) as progress:
         task = progress.add_task("Summarising commits…", total=None)
-        result = agent.run_sync("Summarise the commits", deps=commit_list)
+        result = agent.run_sync(f"Summarize Commmits : {commit_list}")
+        print(result)
         progress.update(task, description="Done")
 
     console.print("\n[bold underline]### Release note summary ###[/bold underline]\n")
     for out in result.output:
         short_sha = out.sha[:7]
         console.print(
-            f"[white]- [/white][bold]{short_sha}[/bold] [dim]({out.category})[/dim]: {out.human_summary}"
+            f"[white]- [/white][bold]{short_sha}[/bold] [dim]({out.category})[/dim]: {out.human_summary} - {out.author}"
         )
 
     # Write markdown

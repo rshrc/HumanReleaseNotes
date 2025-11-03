@@ -1,3 +1,5 @@
+import os
+
 import git
 from rich.console import Console
 

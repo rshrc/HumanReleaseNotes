@@ -1,6 +1,6 @@
 from pydantic_ai import Agent, RunContext
 
-from .schema import CommitData, SummaryOutput
+from schema import CommitData, SummaryOutput
 
 MODEL_ID = "google-gla:gemini-2.5-pro"
 
